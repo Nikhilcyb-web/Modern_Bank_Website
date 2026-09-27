@@ -1,12 +1,33 @@
-
+import styles from "./style"
+import { Navbar , Hero ,  Stats, Business,Billing,CardDeal ,Testimonials ,Clients,CTA ,Footer } from "./components"
 
 function App() {
   
 
   return (
-    <div>
-      <h1 className="bg-amber-200 text-7xl  text-amber-950 ">HEY WELCOME</h1>
-      
+    <div className="bg-black w-full overflow-hidden">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className = {`${styles.boxWidth}`}>
+          <Navbar/>
+        </div>
+      </div>
+      <div className={`bg-black ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Hero/>
+        </div>
+      </div>
+       <div className={`bg-black ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Stats/>
+          <Business/>
+          <Billing/>
+          <CardDeal/>
+          <Testimonials/>
+          <Clients/>
+          <CTA/>
+          <Footer/>
+        </div>
+      </div>
     </div>
   )
 }
